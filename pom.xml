@@ -11,6 +11,10 @@
 	</parent>
 	<groupId>com.mphasis.sample</groupId>
 
+	<properties>
+		<!--sonar.host.url>url</sonar.host.url>
+		<sonar.login>token</sonar.login-->
+	</properties>
 
 	<name>sample-service</name>
 	<description>Sample REST API</description>
@@ -94,6 +98,25 @@
 						<version>5.4.0</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+				<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
