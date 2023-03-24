@@ -19,4 +19,4 @@ jobs:
           host: ${{ secrets.SONARQUBE_HOST }}
           login: ${{ secrets.SONARQUBE_TOKEN }}
           projectKey: "GitHub-Actions-sample"
-          projectBaseDir: "/github/workspace/src"
+          
